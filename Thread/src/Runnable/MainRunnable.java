@@ -1,4 +1,4 @@
-import bean.BateauRunnable;
+package Runnable;
 
 public class MainRunnable {
 

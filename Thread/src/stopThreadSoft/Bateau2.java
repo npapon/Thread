@@ -1,6 +1,6 @@
-package bean;
+package stopThreadSoft;
 
-public class BateauRunnable implements Runnable {
+public class Bateau2 implements Runnable {
 
     private String  name;
     private boolean stopThread = false;

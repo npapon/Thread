@@ -1,17 +1,17 @@
+package Runnable;
 
-public class MyThread implements Runnable {
+public class BateauRunnable implements Runnable {
 
     private String  name;
-    private boolean exit = false;
+    private boolean stopThread = false;
     private int     rapiditeTraitementEnMiliSecondes;
 
     public void run() {
 
-        while ( !exit ) {
-
+        while ( !stopThread ) {
             naviguer( this.name, this.rapiditeTraitementEnMiliSecondes );
         }
-        System.out.println( name + " Stopped." );
+        System.out.println( name + " a arrete de naviguer" );
     }
 
     public void naviguer( String name, int rapiditeTraitementEnMiliSecondes ) {
@@ -30,14 +30,6 @@ public class MyThread implements Runnable {
 
     }
 
-    public boolean isExit() {
-        return exit;
-    }
-
-    public void setExit( boolean exit ) {
-        this.exit = exit;
-    }
-
     public String getName() {
         return name;
     }
@@ -52,6 +44,14 @@ public class MyThread implements Runnable {
 
     public void setRapiditeTraitementEnMiliSecondes( int rapiditeTraitementEnMiliSecondes ) {
         this.rapiditeTraitementEnMiliSecondes = rapiditeTraitementEnMiliSecondes;
+    }
+
+    public boolean isStopThread() {
+        return stopThread;
+    }
+
+    public void setStopThread( boolean stopThread ) {
+        this.stopThread = stopThread;
     }
 
 }

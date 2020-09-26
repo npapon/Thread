@@ -1,14 +1,14 @@
-package bean;
+package Join;
 
-public class Bateau extends Thread {
+public class Marcher implements Runnable {
 
     public void run() {
-        int i = 0;
-        while ( i++ < 20 ) {
-            System.out.println( "je vogue " + i + " vague(s)" );
 
+        for ( int i = 0; i < 3; i++ ) {
+
+            System.out.println( i + " Je marche" );
             try {
-                Thread.sleep( 2000 );
+                Thread.sleep( 1000 );
             } catch ( InterruptedException e ) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();

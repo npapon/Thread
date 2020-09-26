@@ -1,10 +1,10 @@
-import bean.BateauRunnable;
+package stopThreadSoft;
 
 public class MainRunnableAvecStop {
 
     public static void main( String[] args ) {
 
-        BateauRunnable bateauRunnable = new BateauRunnable();
+        Bateau2 bateauRunnable = new Bateau2();
         Thread thread = new Thread( bateauRunnable );
         ;
         bateauRunnable.setName( "Nicolas" );
@@ -14,7 +14,7 @@ public class MainRunnableAvecStop {
 
         bateauRunnable.setStopThread( true );
 
-        BateauRunnable bateauRunnable2 = new BateauRunnable();
+        Bateau2 bateauRunnable2 = new Bateau2();
         Thread thread2 = new Thread( bateauRunnable2 );
         ;
         bateauRunnable2.setName( "Valentine" );
