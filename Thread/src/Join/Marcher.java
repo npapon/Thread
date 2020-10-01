@@ -3,6 +3,7 @@ package Join;
 public class Marcher implements Runnable {
 
     public void run() {
+        System.out.println( "démarrage du thread " + Thread.currentThread().getName() );
 
         for ( int i = 0; i < 3; i++ ) {
 

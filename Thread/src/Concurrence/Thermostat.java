@@ -9,17 +9,20 @@ public class Thermostat {
     }
 
     public boolean plusChaud() {
-        if ( this.chaudiere.getTemperature() < 25 ) {
-            // l'appel à cette méthode indique simplement à la machine Java
-            // qu'elle doit interrompre momentanément l'exécution de ce thread,
-            // et passer la main au thread suivant
+        synchronized ( chaudiere ) {
+            if ( this.chaudiere.getTemperature() < 25 ) {
+                // l'appel à cette méthode indique simplement à la machine Java
+                // qu'elle doit interrompre momentanément l'exécution de ce
+                // thread,
+                // et passer la main au thread suivant
 
-            Thread.yield();
-            this.chaudiere.augementeTemperature();
+                Thread.yield();
+                this.chaudiere.augementeTemperature();
 
-            return true;
+                return true;
+            }
+            return false;
         }
-        return false;
 
     }
 
